@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:orientation="vertical"
-    tools:context=".login.LoginPage">
+    tools:context=".Login.LoginPage">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -164,6 +164,7 @@
             />
 
         <Button
+            android:id="@+id/button"
             android:layout_width="220dp"
             android:layout_height="55dp"
             android:textColor="@color/white"

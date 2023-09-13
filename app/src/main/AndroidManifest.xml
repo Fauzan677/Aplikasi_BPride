@@ -13,10 +13,10 @@
         android:theme="@style/Theme.B_pride"
         tools:targetApi="31">
         <activity
-            android:name=".login.LoginPage"
+            android:name=".Login.LoginPage"
             android:exported="false" />
         <activity
-            android:name=".login.ForgotPassword"
+            android:name=".Login.ForgotPassword"
             android:exported="false" />
         <activity
             android:name=".Splash.SplashScreen"
@@ -31,7 +31,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".login.RegisterPage"
+            android:name=".Login.RegisterPage"
             android:exported="false" />
 
         <meta-data
