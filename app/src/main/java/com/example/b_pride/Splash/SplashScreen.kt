@@ -8,7 +8,7 @@ import android.os.Looper
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import com.example.b_pride.R
-import com.example.b_pride.login.LoginPage
+import com.example.b_pride.Login.LoginPage
 
 class SplashScreen : AppCompatActivity() {
 
