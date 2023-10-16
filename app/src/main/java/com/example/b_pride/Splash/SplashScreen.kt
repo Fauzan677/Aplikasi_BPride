@@ -18,7 +18,6 @@ class SplashScreen : AppCompatActivity() {
         setContentView(R.layout.activity_splash_screen)
         gambar_loading = findViewById(R.id.apple)
 
-
         setAnimation()
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this, LoginPage::class.java))

@@ -164,6 +164,7 @@
             />
 
         <Button
+            android:id="@+id/masuk"
             android:layout_width="220dp"
             android:layout_height="55dp"
             android:textColor="@color/white"
