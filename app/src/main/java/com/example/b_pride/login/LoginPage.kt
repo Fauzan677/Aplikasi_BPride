@@ -18,19 +18,19 @@ class LoginPage : AppCompatActivity() {
 
         val lupa = findViewById<TextView>(R.id.lupa)
         lupa.setOnClickListener {
-            var Intent = Intent(this, ForgotPassword::class.java)
+            val Intent = Intent(this, ForgotPassword::class.java)
             startActivity(Intent)
         }
 
-        var daftar = findViewById<TextView>(R.id.daftar)
+        val daftar = findViewById<TextView>(R.id.daftar)
         daftar.setOnClickListener {
-            var Intent = Intent(this, RegisterPage::class.java)
+            val Intent = Intent(this, RegisterPage::class.java)
             startActivity(Intent)
         }
 
         val masuk : Button = findViewById(R.id.masuk)
         masuk.setOnClickListener {
-            var intent = Intent(this, navigation :: class.java)
+            val intent = Intent(this, navigation :: class.java)
             startActivity(intent)
         }
 
