@@ -7,9 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import com.example.b_pride.Login.ForgotPassword
 import com.example.b_pride.Login.RegisterPage
-import com.example.b_pride.MainActivity
 import com.example.b_pride.R
-import com.example.b_pride.fragment.CobaFragment
 import com.example.b_pride.nav.navigation
 
 
@@ -18,7 +16,7 @@ class LoginPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_page)
 
-        var lupa = findViewById<TextView>(R.id.lupa)
+        val lupa = findViewById<TextView>(R.id.lupa)
         lupa.setOnClickListener {
             var Intent = Intent(this, ForgotPassword::class.java)
             startActivity(Intent)
