@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.b_pride.databinding.ActivityForgotPasswordBinding
+import com.example.b_pride.login.LoginPage
 
 class ForgotPassword : AppCompatActivity() {
 
@@ -14,7 +15,7 @@ class ForgotPassword : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.button.setOnClickListener {
-            startActivity(Intent(this, LoginPage::class.java))
+            startActivity(Intent(this, LoginPage ::class.java))
 
         }
     }

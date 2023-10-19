@@ -8,7 +8,7 @@ import android.os.Looper
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import com.example.b_pride.R
-import com.example.b_pride.Login.LoginPage
+import com.example.b_pride.login.LoginPage
 
 class SplashScreen : AppCompatActivity() {
 
@@ -20,7 +20,7 @@ class SplashScreen : AppCompatActivity() {
 
         setAnimation()
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, LoginPage::class.java))
+            startActivity(Intent(this,LoginPage ::class.java))
             finish()
         }, 2000)
     }

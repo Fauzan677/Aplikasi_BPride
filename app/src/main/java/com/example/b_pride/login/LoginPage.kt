@@ -5,8 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import com.example.b_pride.Login.ForgotPassword
+import com.example.b_pride.Login.RegisterPage
 import com.example.b_pride.MainActivity
 import com.example.b_pride.R
+import com.example.b_pride.fragment.CobaFragment
 import com.example.b_pride.nav.navigation
 
 

@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 
 }
 
@@ -28,16 +29,15 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
-        dataBinding {
-            viewBinding = true
-        }
+        viewBinding = true
+
     }
 }
 
@@ -52,5 +52,50 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation ("androidx.recyclerview:recyclerview:1.1.0")
+    implementation ("androidx.cardview:cardview:1.0.0")
+
+
+
+    implementation ("androidx.room:room-ktx:2.5.2")
+    implementation ("androidx.room:room-runtime:2.5.2")
+    kapt ("androidx.room:room-compiler:2.5.2")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+
+    // Room components
+//    implementation("androidx.room:room-runtime:2.2.5")
+//    kapt("androidx.room:room-compiler:2.2.5")
+//    implementation("androidx.room:room-ktx:2.2.5")
+//    androidTestImplementation("androidx.room:room-testing:2.2.5")
+
+    // Lifecycle components
+//    implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
+//    implementation("androidx.lifecycle:lifecycle-common-java8:2.2.0")
+//    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0")
+
+    // Kotlin components
+//    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.72")
+//    api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.5")
+//    api("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.5")
+
+    //DataBinding
+//    kapt("com.android.databinding:compiler:3.2.0-alpha10")
+
+    // Retrofit
+//    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+//    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+//    implementation("com.squareup.okhttp3:logging-interceptor:4.9.0")
+
+    // Coroutine Lifecycle Scopes
+//    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+//    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+//    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+
+    //Glide
+//    implementation ("com.github.bumptech.glide:glide:4.14.1")
+//    annotationProcessor ("com.github.bumptech.glide:compiler:4.13.2")
+//
+//    implementation ("de.hdodenhof:circleimageview:3.1.0")
 
 }

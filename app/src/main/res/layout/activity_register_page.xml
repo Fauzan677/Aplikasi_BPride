@@ -95,11 +95,12 @@
                 android:src="@drawable/line_v" />
 
             <EditText
-                android:id="@+id/username1"
+                android:id="@+id/username"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="15dp"
                 android:hint="Username"
+                android:inputType="textPersonName"
                 android:background="@null" />
         </LinearLayout>
         <!--    android:textColorHint="@drawable/baground"-->
@@ -108,7 +109,7 @@
             android:id="@+id/label_pass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Masukan Password"
+            android:text="Masukan Email"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:fontFamily="@font/poppins_regular"
@@ -139,7 +140,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginTop="15dp"
-                android:src="@drawable/pass" />
+                android:src="@drawable/baseline_mail_24" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -148,12 +149,12 @@
                 android:src="@drawable/line_v" />
 
             <EditText
-                android:id="@+id/passtext"
+                android:id="@+id/email"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="15dp"
-                android:hint="Password"
-                android:inputType="textPassword"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
                 android:background="@null" />
         </LinearLayout>
 
@@ -162,7 +163,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/su_password"
-            android:text="Masukan kembali Password"
+            android:text="Masukan Password"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:fontFamily="@font/poppins_regular"
@@ -200,11 +201,11 @@
                 android:src="@drawable/line_v" />
 
             <EditText
-                android:id="@+id/passkonfirm"
+                android:id="@+id/password"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="15dp"
-                android:hint="Konfirmasi Password"
+                android:hint="Password"
                 android:inputType="textPassword"
                 android:background="@null" />
         </LinearLayout>
@@ -214,7 +215,7 @@
             android:layout_width="220dp"
             android:layout_height="55dp"
             android:layout_gravity="center_horizontal"
-            android:text="Masuk"
+            android:text="Daftar"
             android:textColor="@color/white"
             android:fontFamily="@font/poppins_semi_bold"
             app:layout_constraintBottom_toBottomOf="parent"
