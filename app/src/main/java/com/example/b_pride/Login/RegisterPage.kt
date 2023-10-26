@@ -1,12 +1,11 @@
 package com.example.b_pride.Login
 
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.b_pride.data.AppDatabase
-import com.example.b_pride.data.User
+import com.example.b_pride.data.lokal.AppDatabase
+import com.example.b_pride.data.lokal.User
 import com.example.b_pride.databinding.ActivityRegisterPageBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope

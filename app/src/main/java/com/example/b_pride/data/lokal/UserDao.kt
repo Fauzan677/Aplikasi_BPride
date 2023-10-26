@@ -1,4 +1,4 @@
-package com.example.b_pride.data
+package com.example.b_pride.data.lokal
 
 import androidx.room.Dao
 import androidx.room.Delete

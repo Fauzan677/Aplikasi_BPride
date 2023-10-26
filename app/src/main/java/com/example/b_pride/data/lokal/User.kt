@@ -1,4 +1,4 @@
-package com.example.b_pride.data
+package com.example.b_pride.data.lokal
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

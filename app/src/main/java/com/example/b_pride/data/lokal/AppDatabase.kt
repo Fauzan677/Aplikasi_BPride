@@ -1,4 +1,4 @@
-package com.example.b_pride.data
+package com.example.b_pride.data.lokal
 
 import android.content.Context
 import androidx.room.Database
@@ -15,7 +15,7 @@ abstract class AppDatabase : RoomDatabase() {
         @Volatile
         private var INSTANCE : AppDatabase? = null
 
-        fun getDatabase(context: Context): AppDatabase{
+        fun getDatabase(context: Context): AppDatabase {
 
             val tempInstance = INSTANCE
             if(tempInstance != null){
