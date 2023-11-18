@@ -22,24 +22,24 @@ class RegisterPage : AppCompatActivity() {
 
         appDb = AppDatabase.getDatabase(this)
         binding.button.setOnClickListener {
+            // Intent untuk pindah ke halaman login
+
+//            val intent = Intent(this, LoginPage::class.java)
+//            startActivity(intent)
             writeData()
         }
-
-
     }
 
     private fun writeData(){
-
         val name = binding.username.text.toString()
         val email = binding.email.text.toString()
         val password = binding.password.text.toString()
 
-        if(name.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()     ) {
+        if(name.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()) {
             val user = User(
                 null, name, email, password
             )
             GlobalScope.launch(Dispatchers.IO) {
-
                 appDb.userDao().insert(user)
             }
 
@@ -48,10 +48,10 @@ class RegisterPage : AppCompatActivity() {
             binding.password.text.clear()
 
             Toast.makeText(this,"Successfully written", Toast.LENGTH_SHORT).show()
-        }else {
-            Toast.makeText(this,"PLease Enter Data", Toast.LENGTH_SHORT).show()
+
+
+        } else {
+            Toast.makeText(this,"Please Enter Data", Toast.LENGTH_SHORT).show()
         }
-
-
     }
 }

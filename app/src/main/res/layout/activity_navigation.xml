@@ -28,8 +28,5 @@
         app:itemIconTint="@color/gradient"
         app:menu="@menu/show_menu"
         app:layout_constraintEnd_toEndOf="parent"/>
-    <!--      alignperentbottom untuk manruh nav di atas/>-->
-    <!--  app:itemIconTint="@color/material_on_background_disabled"-->
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

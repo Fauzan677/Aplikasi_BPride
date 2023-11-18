@@ -9,16 +9,14 @@ import android.view.ViewGroup
 import com.example.b_pride.data.lokal.AppDatabase
 import com.example.b_pride.data.lokal.User
 import com.example.b_pride.databinding.FragmentProfileBinding
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-
+import kotlinx.coroutines.withContext
 
 class ProfileFragment : Fragment() {
-    private lateinit var appDb : AppDatabase
-
+    private lateinit var appDb: AppDatabase
     private var _binding: FragmentProfileBinding? = null
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -28,6 +26,13 @@ class ProfileFragment : Fragment() {
     ): View? {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         val view = binding.root
+
+        // Inisialisasi database
+        appDb = AppDatabase.getDatabase(requireContext())
+
+        // Memanggil fungsi untuk membaca dan menampilkan data
+        readData()
+
         return view
     }
 
@@ -35,41 +40,21 @@ class ProfileFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-//    override fun onCreateView(
-//        inflater: LayoutInflater, container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View? {
-//        // Inflate the layout for this fragment
-//        _binding = ProfileFragment.inflate(R.layout.fragment_profile, container, false)
-//        val view = binding.root
-//        return view
-////        return inflater.inflate(R.layout.fragment_profile, container, false)
-//        readData()
-//
-//    }
 
-
-    private fun readData(){
-
+    private fun readData() {
+        GlobalScope.launch(Dispatchers.IO) {
             lateinit var user: User
-
-            GlobalScope.launch {
-
-
-                user = appDb.userDao().findByRoll(3)
-                Log.d("Data",user.toString())
+            user = appDb.userDao().findByRoll()
+            Log.d("Data", user.toString())
+            withContext(Dispatchers.Main) {
                 displayData(user)
-
             }
-
+        }
     }
 
-    private suspend fun displayData(user: User){
-
+    private fun displayData(user: User) {
         binding.username.text = user.firstName
         binding.email.text = user.email
         binding.password.text = user.password
-
     }
-
 }

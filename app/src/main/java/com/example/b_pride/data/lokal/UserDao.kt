@@ -11,8 +11,11 @@ interface UserDao {
     @Query("SELECT * FROM user_table")
     fun getAll(): List<User>
 
-    @Query("SELECT * FROM user_table WHERE id LIKE :id LIMIT 1")
-    suspend fun findByRoll(id: Int): User
+    @Query("SELECT * FROM user_table ORDER BY id desc LIMIT 1 ")
+    suspend fun findByRoll(): User
+
+    @Query("SELECT first_name, password FROM user_table WHERE first_name=:user_name and password=:user_pass")
+    suspend fun getNamePass(user_name: String, user_pass: String) : User
 
     @Query("SELECT * FROM user_table WHERE id=:user_id")
     suspend fun getUser(user_id: Int) : User

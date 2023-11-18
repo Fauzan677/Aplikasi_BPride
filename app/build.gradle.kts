@@ -79,6 +79,9 @@ dependencies {
 
     implementation ("de.hdodenhof:circleimageview:3.1.0")
 
+    // koin
+    implementation("io.insert-koin:koin-android:3.1.2")
+
     // Room components
 //    implementation("androidx.room:room-runtime:2.2.5")
 //    kapt("androidx.room:room-compiler:2.2.5")
