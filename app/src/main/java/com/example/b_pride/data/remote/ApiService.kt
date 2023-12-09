@@ -1,9 +1,13 @@
 package com.example.b_pride.data.remote
-
-import retrofit2.Call
+import com.example.b_pride.data.remote.response.ProductResponse
+import retrofit2.Response
 import retrofit2.http.GET
 
+
 interface ApiService {
-    @GET("/users")
-    fun getUsers(): Call<List<UsersItem>>
+    @GET("products/category/smartphones")
+    suspend fun getSmartphone(): Response<ProductResponse>
+
+    @GET("products/category/laptops")
+    suspend fun getLaptop(): Response<ProductResponse>
 }

@@ -14,7 +14,7 @@ import com.example.b_pride.data.remote.UsersItem
 class MainAdapter(var context: Context, var list: List<UsersItem>): RecyclerView.Adapter<MainAdapter.ViewHolder>(){
     inner class ViewHolder(view: View): RecyclerView.ViewHolder(view){
         val name: TextView = view.findViewById(R.id.name_rv)
-        val image: ImageView = view.findViewById(R.id.image_rv)
+//        val image: ImageView = view.findViewById(R.id.image_rv)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -28,8 +28,8 @@ class MainAdapter(var context: Context, var list: List<UsersItem>): RecyclerView
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.name.text = list[position].login
-        Glide.with(context)
-            .load(list[position].avatar_url)
-            .into(holder.image)
+//        Glide.with(context)
+//            .load(list[position].avatar_url)
+//            .into(holder.image)
     }
 }

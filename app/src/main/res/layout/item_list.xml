@@ -1,24 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_elektronik"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginBottom="20dp"
     android:padding="8dp"
-    android:orientation="horizontal">
+    app:cardCornerRadius="20dp">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/image_rv"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@mipmap/ic_launcher"
-        />
-    <TextView
-        android:id="@+id/name_rv"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:textColor="#409AFF"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:text="Hallo"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
 
-</LinearLayout>
+        <ImageView
+            android:id="@+id/iv_card"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/name_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="Nama"
+            app:layout_constraintTop_toBottomOf="@+id/iv_card"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/garis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/name_rv"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/brand_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:text="Brand"
+            app:layout_constraintTop_toBottomOf="@+id/name_rv"
+            app:layout_constraintStart_toEndOf="@+id/garis"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/stok_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="stok"
+            android:textColor="@color/grey"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@id/item"
+            app:layout_constraintTop_toBottomOf="@id/iv_card"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="2dp"/>
+
+        <TextView
+            android:id="@+id/item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Items"
+            android:textColor="@color/grey"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_card"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:id="@+id/deskripsi_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/grey"
+            android:textSize="15sp"
+            android:text="Deskripsi"
+            app:layout_constraintTop_toBottomOf="@+id/garis"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
+    <!--            android:scaleType="centerCrop" -->

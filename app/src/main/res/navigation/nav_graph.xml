@@ -3,20 +3,57 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/cobaFragment">
+    app:startDestination="@id/splashFragment">
 
     <fragment
-        android:id="@+id/cobaFragment"
-        android:name="com.example.b_pride.fragment.CobaFragment"
-        android:label="fragment_coba"
-        tools:layout="@layout/fragment_coba" >
+        android:id="@+id/splashFragment"
+        android:name="com.example.b_pride.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
         <action
-            android:id="@+id/action_cobaFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
     </fragment>
     <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.example.b_pride.fragment.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/loginFragment"
+        android:name="com.example.b_pride.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_navigationParentFragment"
+            app:destination="@id/navigationParentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.b_pride.ui.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigationParentFragment"
+        android:name="com.example.b_pride.ui.konten.NavigationParentFragment"
+        android:label="fragment_navigation_parent"
+        tools:layout="@layout/fragment_navigation_parent" >
+        <action
+            android:id="@+id/action_navigationParentFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.b_pride.ui.konten.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_navigationParentFragment"
+            app:destination="@id/navigationParentFragment" />
+    </fragment>
 </navigation>

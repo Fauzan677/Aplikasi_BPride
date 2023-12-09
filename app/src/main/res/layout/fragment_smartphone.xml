@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".ui.konten.smartphone.SmartphoneFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/tv_laptop"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="List Smartphone"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textAlignment="center"
+            android:paddingTop="25dp" />
+
+        <ImageView
+            android:id="@+id/garis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/garis_header"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toBottomOf="@+id/tv_laptop"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_product1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_list"
+            app:layout_constraintTop_toBottomOf="@+id/garis"
+            android:layout_marginTop="20dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
