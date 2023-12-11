@@ -19,6 +19,11 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
+
+        binding.lupa.setOnClickListener{
+            findNavController().navigate(R.id.action_loginFragment_to_forgotPasswordFragment)
+        }
+
         init()
         observeData()
         return binding.root

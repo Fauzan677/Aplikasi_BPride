@@ -62,6 +62,7 @@ dependencies {
     kapt ("androidx.room:room-compiler:2.5.2")
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
     implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+    implementation ("com.google.android.material:material:1.0.0")
 
     // Retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")

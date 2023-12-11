@@ -33,6 +33,10 @@ class ProfileFragment : Fragment() {
         val view = binding.root
         val username = arguments?.getString("username") ?: ""
 
+//        binding.keluar.setOnClickListener{
+//            findNavController().navigate(R.id.action_profileFragment_to_loginFragment)
+//        }
+
         binding.back.setOnClickListener{
             val bundle = Bundle().apply {
                 putString("username", username)

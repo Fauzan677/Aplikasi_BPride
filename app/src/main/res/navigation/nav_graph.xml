@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_loginFragment_to_navigationParentFragment"
             app:destination="@id/navigationParentFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -55,5 +58,17 @@
         <action
             android:id="@+id/action_profileFragment_to_navigationParentFragment"
             app:destination="@id/navigationParentFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.b_pride.ui.login.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
 </navigation>

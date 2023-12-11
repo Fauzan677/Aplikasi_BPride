@@ -15,14 +15,6 @@
         android:paddingRight="50dp"
         android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/logo"
-            android:layout_marginTop="85dp"
-            android:layout_gravity="center_horizontal"
-            />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,8 +22,9 @@
             android:fontFamily="@font/montagu_slab_36pt_regular"
             android:textSize="38sp"
             android:textColor="@color/white"
+            android:textStyle="bold"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="41dp"
+            android:layout_marginTop="130dp"
             />
 
         <TextView
@@ -40,8 +33,8 @@
             android:text="Masukan Username"
             android:fontFamily="@font/poppins_regular"
             android:textColor="@color/black"
-            android:layout_marginTop="59dp"
-            android:textSize="18sp"
+            android:layout_marginTop="80dp"
+            android:textSize="20sp"
             />
 
         <LinearLayout
@@ -85,7 +78,7 @@
             android:fontFamily="@font/poppins_regular"
             android:textColor="@color/black"
             android:layout_marginTop="10dp"
-            android:textSize="18sp"
+            android:textSize="20sp"
             />
 
         <LinearLayout
@@ -137,7 +130,7 @@
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/roboto_regular"
-                android:textSize="12sp"
+                android:textSize="16sp"
                 />
 
             <TextView
@@ -146,9 +139,9 @@
                 android:layout_height="wrap_content"
                 android:text="Lupa Password?"
                 android:textColor="@color/blue"
-                android:layout_marginLeft="95dp"
+                android:layout_marginLeft="40dp"
                 android:fontFamily="@font/roboto_regular"
-                android:textSize="12sp"
+                android:textSize="16sp"
                 />
 
         </LinearLayout>
@@ -162,7 +155,7 @@
             android:layout_marginTop="3dp"
             android:layout_marginLeft="10dp"
             android:fontFamily="@font/roboto_regular"
-            android:textSize="12sp"
+            android:textSize="16sp"
             />
 
         <Button
